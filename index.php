@@ -15,7 +15,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 					}
 					else{
 						//echo "<script>alert('conectado correctamente 1');</script>";
-						desconectar(1);
+					    $user = mysqli_real_escape_string($conexion,$_POST['user']);
+    					$password = mysqli_real_escape_string($conexion,$_POST['pass']);
+    					$sql = "SELECT * FROM usuario WHERE id_usuario='$user' AND password_usuario='$password'";
+    					$result = mysqli_query($conexion,$sql);
+
+    					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+						$active = $row['active'];
+
+						$count = mysqli_num_rows($result);
+
+    
+
+						if($count == 1){
+							switch ($row["rol"]) {
+						          case 1:
+						              //desconectar();
+						              header("location: home_administrador.php");
+							            desconectar(1);
+						              break;
+						          case 2:
+						               header("location: home_gerente.php");
+						               desconectar(1);
+						              break;
+						          case 3:
+						               header("location: home_asesor.php");
+						               desconectar(1);
+						              break;
+						          default:
+						               header("location: index.php");
+						               desconectar(1);
+						      }    
+						}
+
+						else{
+							 $error="Usuario y/o contraseña equivocados";
+						}
 					}
 					break;
 
@@ -34,6 +69,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 						$result = mysqli_query($conexion2,$sql);
 
 						$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+						$active = $row['active'];
+						
 						$count = mysqli_num_rows($result);
 
 
@@ -54,21 +91,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 						              break;
 						          default:
 						               header("location: index.php");
-						               desconectar(2);
+						               desconectar(2);             
+									  break;
 						      }    
-						}
-
-						else{
+						}else{
 							 $error="Usuario y/o contraseña equivocados";
-							 desconectar(2);
 						}
-
-
 
 					}
 
 					break;
-				
+
 				default:
 					break;
 			}	

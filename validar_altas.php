@@ -14,6 +14,8 @@ $bd = $_POST['bd']
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  		<link rel="icon" href="images/favicon.ico" type="image/x-icon">-
 	</head>
 	<body>
 
@@ -27,7 +29,7 @@ $bd = $_POST['bd']
 							<ul>
 								<li><a href="altas.html">Registrar</a></li>
 								<li><a href="bajas.html">Eliminar</a></li>
-								<li><a href="consultas.html">Consultar</a></li>
+								<li><a href="consultas.php">Consultar</a></li>
 								<li><a href="cambios.html">Modificar</a></li>
 								<li><a href="index.php">Salir</a></li>
 							</ul>
