@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Alta de productos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<header id="header">
+			<h1><a href="altas.html">Registrar Productos</a></h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle"><span>Menu</span></a>
+						<div id="menu">
+							<ul>
+								<li><a href="altas.html">Registrar</a></li>
+								<li><a href="bajas.html">Eliminar</a></li>
+								<li><a href="consultas.html">Consultar</a></li>
+								<li><a href="cambios.html">Modificar</a></li>
+								<li><a href="index.php">Salir</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+					<article id="main">
+
+						<section class="wrapper style5">
+							<div class="inner">
+								<center><h4>Alta de productos</h4><center>
+
+									<form method="post" action="validar_altas.php">
+										<!--
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="sku" id="sku" value="" placeholder="SKU"  required="" />
+											</div>
+										</div>
+										-->
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="nombre_producto" id="nombre_producto" value="" placeholder="Nombre del producto" required="" />
+											</div>
+										</div>
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="precio" id="precio" value="" placeholder="Precio del producto" required="" />
+											</div>
+										</div>
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<textarea placeholder="Descripción del producto" required="" name="descripcion" id="descripcion"></textarea>
+											</div>
+										</div>
+
+										<div class="row uniform">
+										<div class="6u 12u$(xsmall)">
+											<div class="select-wrapper">
+												<select name="bd" id="bd" required>
+													<option value="">- Base de datos -</option>
+													<option value="1">Supermarket</option>
+													<option value="2">Sneakerland</option>
+												</select>
+											</div>
+										</div>
+										</div>
+
+
+										<div class="row uniform">
+										<div class="3u$">
+											<ul class="actions">
+												<li><input type="submit" value="Registrar" class="special" /></li>
+											</ul>
+										</div>
+									</div>
+										</form>
+								</div>
+						</section>
+					</article>
+
+					<!-- Footer -->
+					<footer id="footer" style="padding-top: 30px">
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; PRÁCTICA 2</li><li>Burciaga Ornelas Rodrigo Andrés</li><li>García Enríquez Roberto Francisco</li><li>González García Jorge</li><li>Reyes Izquierdo Julio Armando</li>
+						</ul>
+					</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
