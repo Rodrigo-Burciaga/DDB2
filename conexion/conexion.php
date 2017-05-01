@@ -27,8 +27,8 @@
 		echo "Conectado a las base de datos 2";
 	}
 
-	$datos = $conexion->query("select sku, nombre_producto, descripcion from producto");
-	$datos2 = $conexion2->query("select id_producto, nombre_producto, descripcion_producto from producto");
+	$datos = $conexion->query("select sku, nombre_producto, descripcion, precio from producto");
+	$datos2 = $conexion2->query("select id_producto, nombre_producto, descripcion_producto, precio from producto");
 
 
 ?>

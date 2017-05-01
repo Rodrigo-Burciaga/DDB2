@@ -17,10 +17,10 @@
 						<a href="#menu" class="menuToggle"><span>Menu</span></a>
 						<div id="menu">
 							<ul>
-								<li><a href="altas.php">Registrar</a></li>
+								<li><a href="altas.html">Registrar</a></li>
 								<li><a href="bajas.php">Eliminar</a></li>
 								<li><a href="consultas.php">Consultar</a></li>
-								<li><a href="cambios.php">Modificar</a></li>
+								<li><a href="modificar.php">Modificar</a></li>
 								<li><a href="index.php">Salir</a></li>
 							</ul>
 						</div>
@@ -45,6 +45,7 @@
 													<th>SKU</th>
 													<th>Nombre</th>
 													<th>Descripcion</th>
+													<th>Precio</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -53,6 +54,7 @@
 														<td><?php echo $user['sku']; ?></td>
 														<td><?php echo $user['nombre_producto']; ?></td>
 														<td><?php echo $user['descripcion']; ?></td>
+														<td><?php echo $user['precio']; ?></td>
 													</tr>
 												<?php } mysqli_close($conexion);?>
 											</tbody>
@@ -65,6 +67,7 @@
 													<th>SKU</th>
 													<th>Nombre</th>
 													<th>Descripcion</th>
+													<th>Precio</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -73,6 +76,7 @@
 														<td><?php echo $user2['id_producto']; ?></td>
 														<td><?php echo $user2['nombre_producto']; ?></td>
 														<td><?php echo $user2['descripcion_producto']; ?></td>
+														<td><?php echo $user2['precio']; ?></td>
 													</tr>
 												<?php } mysqli_close($conexion2);?>
 												

@@ -30,7 +30,7 @@
 											<li><a href="altas.html">REGISTRAR</a></li>
 											<li><a href="bajas.html">ELIMINAR</a></li>
 											<li><a href="consultas.php">CONSULTAR</a></li>
-											<li><a href="modificar.html">MODIFICAR</a></li>
+											<li><a href="modificar.php">MODIFICAR</a></li>
 											<li><a href="index.php">SALIR</a></li>
 										</ul>
 									</div>
